@@ -1,11 +1,14 @@
 var http = require("http");
 var url = require("url");
+var fs = require("fs");
+
+var newPostFormHTML = fs.readFileSync("views/post/new.html");
 
 function renderNewPostForm(request, response) {
   response.writeHead(200, {
-    "Content-type": "text/plain"
+    "Content-type": "text/html; charset=utf-8"
   });
-  response.end("Hello World");
+  response.end(newPostFormHTML);
 }
 
 function render404(request, response) {
