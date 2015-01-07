@@ -13,7 +13,7 @@ function renderNewPostForm(request, response) {
 
 function render404(request, response) {
   response.writeHead(404);
-  response.end("404, File not Found");
+  response.end("404 - Sorry, but we couldn't find what you were looking for!");
 }
 
 var server = http.createServer(function(request, response) {
